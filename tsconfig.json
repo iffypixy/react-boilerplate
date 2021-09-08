@@ -14,9 +14,7 @@
     "allowJs": true,
     "jsx": "react-jsx",
     "baseUrl": "./",
-    "paths": {
-      "@assets/*": ["./src/assets", "./src/assets/*"]
-    }
+    "paths": {}
   },
   "include": ["./src/**/*", "./typings/**/*"],
   "exclude": ["node_modules", "./**/*.spec.ts"]
