@@ -1,5 +1,5 @@
 {
-  "name": "react-setup",
+  "name": "react-boilerplate",
   "version": "1.0.0",
   "scripts": {
     "start": "webpack serve --config webpack.config.js --env env=development",
