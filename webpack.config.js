@@ -8,6 +8,7 @@ const BundleAnalyzerWebpackPlugin =
 
 module.exports = ({env}) => {
   const isDev = env === "development";
+  const isProd = !isDev;
 
   return {
     mode: env,
@@ -18,7 +19,7 @@ module.exports = ({env}) => {
       clean: true,
     },
     optimization: {
-      minimize: isDev,
+      minimize: isProd,
       splitChunks: {
         chunks: "all",
       },
@@ -46,7 +47,7 @@ module.exports = ({env}) => {
       rules: [
         {
           test: /\.(ts|js)x?$/,
-          exclude: /node_modules/,
+
           use: [
             {
               loader: "babel-loader",
