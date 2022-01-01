@@ -47,7 +47,7 @@ module.exports = ({env}) => {
       rules: [
         {
           test: /\.(ts|js)x?$/,
-
+          exclude: /node_modules/,
           use: [
             {
               loader: "babel-loader",
@@ -72,6 +72,7 @@ module.exports = ({env}) => {
     devServer: {
       hot: true,
       port: 3000,
+      historyApiFallback: true,
     },
     stats: "errors-warnings",
   };
